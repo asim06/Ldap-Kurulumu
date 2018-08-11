@@ -1,0 +1,20 @@
+$sudo su
+# apt -y install libnss-ldap libpam-ldap ldap-utils
+#nano /etc/nsswitch.conf
+passwd:     compat ldap
+group:     compat ldap
+shadow:     compat ldap
+metin içeresindeki compat yazan yerlere ldap eklenecektir.
+
+#nano /etc/pam.d/common-password
+use_authtok cümlesini silenecek
+
+#nano /etc/pam.d/common-sessio
+
+session  required pam_mkhomedir.so  umask=0077 skel=/etc/skel
+#ystemctl restart nscd
+#getent passwd
+ile server tarafından eklenen kullanıcı görünecektir.
+#systemctl restart lightdm
+oturum kapanılacaktır.
+gelen ekranda pardus1 123456 kullanıcı adı şifresi ile giriş yaplabilir duruma gelecektir.
