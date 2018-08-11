@@ -1,0 +1,35 @@
+$sudo su
+
+#apt install slapd ldap-utils
+
+#dpkg-reconfigure slapd
+
+#slapcat
+
+
+#nano kullanicilar.ldif
+dn: ou=kullanicilar,dc=asimpardus,dc=com
+objectClass: organizationalUnit
+ou: kullanicilar
+
+kayıt edilir ve çıkılır.
+#ldapadd -x -D cn=admin,dc=asimpardus,dc=com -W -f kullanicilar.ldif
+
+
+
+#nano pardus1.ldif
+
+dn: uid=pardus1,ou=kullanicilar,dc=asimpardus,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: pardus1
+sn: soyadi
+userPassword: 123456
+loginShell: /bin/bash
+uidNumber: 1001
+gidNumber: 50001
+homeDirectory: /home/pardus1
+
+kayıt edilir ve çıkılır.
+#ldapadd -x -D cn=admin,dc=asimpardus,dc=net -W -f pardus1.ldif
