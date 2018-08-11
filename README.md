@@ -1,2 +1,4 @@
 # Ldap-Kurulumu
-Pardus server client üzerine ldap kurulumu
+Pardus server ve Client üzerine ldap kurulumu
+Server ve client birbirleri ile haberleşebilecekleri aynı ağda olmalıdır.
+
