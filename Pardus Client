@@ -9,10 +9,12 @@ metin içeresindeki compat yazan yerlere ldap eklenecektir.
 #nano /etc/pam.d/common-password
 use_authtok cümlesini silenecek
 
-#nano /etc/pam.d/common-sessio
-
+#nano /etc/pam.d/common-session
 session  required pam_mkhomedir.so  umask=0077 skel=/etc/skel
-#ystemctl restart nscd
+
+satırı eklenecektir
+
+#systemctl restart nscd
 #getent passwd
 ile server tarafından eklenen kullanıcı görünecektir.
 #systemctl restart lightdm
