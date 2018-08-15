@@ -32,4 +32,4 @@ gidNumber: 50001
 homeDirectory: /home/pardus1
 
 kayıt edilir ve çıkılır.
-#ldapadd -x -D cn=admin,dc=asimpardus,dc=net -W -f pardus1.ldif
+#ldapadd -x -D cn=admin,dc=asimpardus,dc=com -W -f pardus1.ldif
